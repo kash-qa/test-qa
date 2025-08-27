@@ -66,8 +66,6 @@ def test_zero_convert(from_currency, to_currency, amount, wallet_client, quote_c
     assert_error_response(exc_info, 400, "One of 'amountIn' or 'amountOut' must be specified but not both.")
 
 
-
-
 @pytest.mark.parametrize(
     "from_currency,to_currency",
     [
