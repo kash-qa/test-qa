@@ -65,7 +65,13 @@ def test_convert_currency(from_currency, to_currency, amount, wallet_client, quo
     ...
 ```
 
+
 ### Helper Utilities
 
 Common actions like fetching wallet balances or IDs are extracted to helper functions in `utils/test_helpers.py` for reuse and clarity.
+
+
+### Example of the run in VSCode
+<img width="805" height="88" alt="image" src="https://github.com/user-attachments/assets/019a8721-92eb-4f7d-849c-e17428a2a4b9" />
+<img width="801" height="18" alt="image" src="https://github.com/user-attachments/assets/46675f2a-fc01-431b-936f-26e3294480bb" />
 
