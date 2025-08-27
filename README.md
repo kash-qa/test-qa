@@ -73,5 +73,6 @@ Common actions like fetching wallet balances or IDs are extracted to helper func
 
 ### Example of the run in VSCode
 <img width="805" height="88" alt="image" src="https://github.com/user-attachments/assets/019a8721-92eb-4f7d-849c-e17428a2a4b9" />
-<img width="801" height="18" alt="image" src="https://github.com/user-attachments/assets/46675f2a-fc01-431b-936f-26e3294480bb" />
+<img width="797" height="13" alt="image" src="https://github.com/user-attachments/assets/e6da2014-3430-4789-9602-461c374e87c2" />
+
 
