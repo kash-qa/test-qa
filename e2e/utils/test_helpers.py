@@ -15,3 +15,9 @@ def get_wallet_ids(wallet_client, token, from_currency, to_currency):
     from_wallet_id = wallet_client.get_wallet_id_by_currency(token, from_currency)
     to_wallet_id = wallet_client.get_wallet_id_by_currency(token, to_currency)
     return from_wallet_id, to_wallet_id
+
+def to_float(value):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        raise ValueError(f"Cannot convert {value} to float")

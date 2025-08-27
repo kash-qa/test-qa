@@ -1,6 +1,6 @@
 import pytest
 import math
-from e2e.utils.test_helpers import wait_for_payment_success, get_balance, get_wallet_ids
+from e2e.utils.test_helpers import wait_for_payment_success, get_balance, get_wallet_ids, to_float
 
 @pytest.mark.parametrize(
     "from_currency,to_currency,amount",
@@ -38,3 +38,13 @@ def test_convert_currency(from_currency, to_currency, amount, wallet_client, quo
 
     assert math.isclose(converted_amount, float(quote_response["amountOut"]), rel_tol=1e-6), \
         f"Expected converted amount {quote_response['amountOut']}, got {converted_amount}"
+    
+    actual_fee = to_float(quote_response["fee"])
+    expected_fee = to_float(quote_response["fees"]["percentage"]["service"])/100 * to_float(quote_response["amountIn"])
+    print(f"Expected fee: {expected_fee}, Actual fee: {actual_fee}")
+    assert math.isclose(actual_fee, expected_fee, rel_tol=1e-6), (
+    f"Expected fee {expected_fee} (fee percentage * amountIn), but got {actual_fee}"
+)
+
+
+ 
